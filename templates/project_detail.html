@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 800px;">
+    <div class="card-body">
+        <h1 class="card-title">{{ project.name }}</h1>
+        <p class="card-text"><strong>Description:</strong> {{ project.description }}</p>
+        <p class="card-text"><strong>Date:</strong> {{ project.date }}</p>
+        <p class="card-text"><strong>Technologies Used:</strong> {{ project.technologies }}</p>
+        {% if project.link %}
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="/view/{{ project.id }}" class="btn btn-dark" target="_blank">View Case Study</a>
+                <a href="/projects" class="btn btn-dark">Back to Projects</a>
+            </div>
+        {% else %}
+            <div class="text-center mt-4">
+                <a href="/projects" class="btn btn-dark">Back to Projects</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

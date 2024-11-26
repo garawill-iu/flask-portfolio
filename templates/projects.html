@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Main Header -->
+    <h1 class="text-center mb-5">Strategic IT Cases and Briefings</h1>
+
+    {% for group in project_list %}
+        <!-- Section Header -->
+        <div class="mb-5">
+            <h2 class="text-center text-dark mb-4">{{ group.header }}</h2>
+            <hr class="w-50 mx-auto text-muted mb-4"> <!-- Subtle Divider -->
+            <div class="row row-cols-1 row-cols-md-3 {% if group.header == 'Case Presentations' %}row-cols-lg-4{% endif %} g-4">
+                {% for project in group.projects %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">{{ project.name }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                                {% if project.link %}
+                                    <a href="/projects/{{ project.id }}" class="btn btn-dark mt-auto">View Details</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

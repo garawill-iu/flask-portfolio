@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Subtle off-white background for contrast */
+    color: #343a40; /* Neutral dark gray for readable text */
+    line-height: 1.6;
+    margin: 0; /* Ensures no unwanted margins */
+    padding: 0; /* Removes default padding */
+}
+
+html, body {
+    height: 100%; /* Ensures the footer spans properly */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #023047 !important; /* Same navy as footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    color: #ffffff !important; /* White text */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* White brand text */
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem !important;
+    padding: 0.5rem 1rem !important;
+    color: #ffffff !important; /* White link text */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #caf0f8 !important; /* Light blue on hover */
+}
+
+/* Hero Section */
+h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #343a40; /* Neutral dark gray for professional tone */
+    margin-bottom: 40px; /* Adds spacing below the header */
+}
+
+.lead {
+    color: #6c757d; /* Muted gray for descriptive text */
+    font-size: 1.2rem; /* Enhances readability */
+    line-height: 1.8;
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: #343a40 !important; /* Neutral dark for a modern look */
+    border: none !important;
+    color: white !important;
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-dark:hover {
+    background-color: #212529 !important; /* Slightly darker on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-body .btn {
+    width: 100%; /* Buttons span full width of the card */
+    margin-top: auto; /* Push buttons to the bottom of the card */
+    text-align: center;
+    padding: 10px 15px !important; /* Adjust padding for smaller buttons */
+    font-size: 0.95rem; /* Slightly smaller font size */
+}
+
+/* Section Styling */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #495057; /* Slightly muted gray for section headers */
+    margin-bottom: 20px;
+}
+
+/* Divider Styling */
+hr {
+    border-top: 1px solid #dee2e6; /* Light gray line for separation */
+    width: 50%; /* Restricts the width for a clean, centered look */
+    margin: 20px auto; /* Centers the divider */
+}
+
+/* Cards */
+.card {
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.03) !important; /* Slight zoom-in effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+
+.card-text {
+    color: #6c757d !important; /* Light gray for text */
+    flex-grow: 1; /* Makes sure text takes up available space */
+}
+
+/* Footer */
+footer {
+    background-color: #023047 !important; /* Deep navy-blue background */
+    color: #ffffff !important; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Links */
+a {
+    color: #0077b6 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: #0056b3 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .lead {
+        font-size: 1rem !important;
+    }
+
+    .btn-lg {
+        font-size: 1rem !important;
+        padding: 8px 16px !important;
+    }
+
+    .card-body .btn {
+        font-size: 0.85rem !important; /* Adjust button font for smaller screens */
+    }
+}
